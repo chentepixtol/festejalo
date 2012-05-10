@@ -1,0 +1,37 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Banner
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          banner
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: 
+        _save:             { label: Guardar }
+        _save_and_add:     { label: Guardar y agregar otro }
+        _delete:           { label: Borrar }
+        _edit:             { label: Editar }
+        _new:              { label: Nuevo }
+        _list:             { label: Regresar }
+      fields:  ~
+      list:    
+        title:             Administración de Anuncios Publicitarios
+        display:           [ id, empresa_id, titulo, texto ]
+        object_actions:
+          _edit:           ~
+          _delete:         ~
+          ver:            { label: Ver, action: view }
+      filter:  
+        display:           [ empresa_id, titulo ]
+      form:    
+        class:            AdminBannerForm
+      edit:    
+        title:             Editar Anuncio Publicitario
+      new:     
+        title:             Nuevo Anuncio Publicitario

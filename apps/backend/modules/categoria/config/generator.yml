@@ -1,0 +1,39 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Categoria
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          categoria
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: ~
+      fields:  ~
+      list: 
+        title: Categorias
+        object_actions:
+          _edit:         { label: Editar }
+          _delete:       { label: Borrar }
+        batch_actions:
+          _delete:       { label: Borrar }
+        actions:
+          _new:          { label: Nuevo }
+        
+      filter: 
+        class: false
+      form:    
+        actions:
+          _delete:       { label: Borrar }
+          _list:         { label: Regresar }
+          _save:         { label: Guardar }
+          _save_and_add: { label: Guardar y Agregar otro}
+          
+      edit:    
+        title: Editar categoria
+      new:    
+        title: Nueva categoria

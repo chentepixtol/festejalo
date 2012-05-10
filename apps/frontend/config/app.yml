@@ -1,0 +1,20 @@
+all:
+  page:
+    title:      festejalo.com.mx
+    slogan:     Festeja tu Fiesta.!!! 
+    credits:    Creado por Vicente Mendoza
+    message:    <h1>Algun mensaje</h1><h2>mas del mensaje</h2><h3>otro mas</h3>   
+  max:
+    empresa:    20
+    categoria:  20
+    segmento:   20
+    banner:     20
+    noticia:    20
+    producto:   20
+    anuncios_destacados:  2
+    productos_destacados: 2
+    anuncios_segmento:    2
+    anuncios_categoria:   2
+    ultimas_noticias:     3
+    maps:       20
+    buscar:     20

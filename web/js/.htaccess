@@ -1,0 +1,11 @@
+# Activa la compresion en el servidor
+php_flag zlib.output_compression On
+
+# Indica el nivel de compresion de 1 a 9 (de menor a mayor compresion)
+php_value zlib.output_compression_level 5
+
+# Indica sobre que extensiones se aplica la compresion
+AddHandler application/x-httpd-php .css .js
+
+php_value auto_prepend_file gzip-start.php
+

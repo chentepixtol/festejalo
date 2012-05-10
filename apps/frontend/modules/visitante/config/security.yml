@@ -1,0 +1,7 @@
+index:
+  is_secure:   on
+  credentials: Visitante
+
+cupones: 
+  is_secure:   on
+  credentials: Visitante

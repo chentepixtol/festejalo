@@ -1,0 +1,34 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Micrositio
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          micrositio
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: 
+        _save:             { label: Guardar }
+        _save_and_add:     { label: Guardar y Agregar }
+        _delete:           { label: Borrar }
+        _edit:             { label: Editar }
+        _new:              { label: Nuevo }
+        _list:             { label: Regresar }
+      fields:  ~
+      list:    
+        title:             Administración de Micrositios
+        peer_method:       doSelectJoinAll
+        display:           [ empresa, quienes_somos, mision, vision, _mini_logo ]
+        actions:           {}
+      filter:  
+        display:           [ quienes_somos, mision, vision ]
+      form:    ~
+      edit:    
+        title:             Editar Micrositio
+      new:     
+        title:             Nuevo Micrositio

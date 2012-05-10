@@ -1,0 +1,23 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  components:
+    sidebar1:   [ anuncio, anunciosAleatorios ]
+    sidebar2:   [ producto, ultimosProductos ]
+    sidebar3:   [ visitante, loginForm ]
+    sidebar4:   [ categoria, listar ]
+    sidebar5:   [ noticia, ultimasNoticias ]
+#  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+#  stylesheets:    [main.css]
+
+  has_layout:     on
+  layout:       multiflex
+#  layout:         layout
+#  layout:         widgetlike

@@ -1,0 +1,19 @@
+# default values
+all:
+  noticias:
+    dias_activos:   2500000
+  producto:
+    width:          600
+    height:         600
+    thumb_width:    180
+    thumb_height:   180
+  productos:
+    basico:         5
+    intermedio:     10
+    avanzado:       15
+  imagen:
+    calidad:        80
+  portal:
+    nombre:         Festejalo
+    slogan:         El Slogan de Festejalo
+    creditos:       Creado por chentepixtol

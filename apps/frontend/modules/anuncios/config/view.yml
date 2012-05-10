@@ -1,0 +1,5 @@
+listadoSuccess:
+  metas:
+    title:      <?php echo sfConfig::get('app_page_title') ?> - Anuncios
+    decription: Se publican los anuncios publicitarios de nuestras empresas en mexico.
+    

@@ -1,0 +1,98 @@
+Estado:
+  Estado_1:
+    nombre: 'Estado de Mexico'
+    slot: estado-de-mexico
+  Estado_2:
+    nombre: 'San Luis Potosi'
+    slot: san-luis-potosi
+  Estado_3:
+    nombre: Aguascalientes
+    slot: aguascalientes
+  Estado_4:
+    nombre: 'Baja California'
+    slot: baja-california
+  Estado_5:
+    nombre: 'Baja California Sur'
+    slot: baja-california-sur
+  Estado_6:
+    nombre: Campeche
+    slot: campeche
+  Estado_7:
+    nombre: Chiapas
+    slot: chiapas
+  Estado_8:
+    nombre: Chihuahua
+    slot: chihuahua
+  Estado_9:
+    nombre: Coahuila
+    slot: coahuila
+  Estado_10:
+    nombre: Colima
+    slot: colima
+  Estado_11:
+    nombre: 'Distrito Federal'
+    slot: distrito-federal
+  Estado_12:
+    nombre: Durango
+    slot: durango
+  Estado_13:
+    nombre: Guanajuato
+    slot: guanajuato
+  Estado_14:
+    nombre: Guerrero
+    slot: guerrero
+  Estado_15:
+    nombre: Hidalgo
+    slot: hidalgo
+  Estado_16:
+    nombre: Jalisco
+    slot: jalisco
+  Estado_17:
+    nombre: Michoacán
+    slot: michoacan
+  Estado_18:
+    nombre: Morelos
+    slot: morelos
+  Estado_19:
+    nombre: Nayarit
+    slot: nayarit
+  Estado_20:
+    nombre: 'Nuevo León'
+    slot: nuevo-leon
+  Estado_21:
+    nombre: Oaxaca
+    slot: oaxaca
+  Estado_22:
+    nombre: Puebla
+    slot: puebla
+  Estado_23:
+    nombre: Querétaro
+    slot: queretaro
+  Estado_24:
+    nombre: 'Quintana Roo'
+    slot: quintana-roo
+  Estado_25:
+    nombre: Sinaloa
+    slot: sinaloa
+  Estado_26:
+    nombre: Sonora
+    slot: sonora
+  Estado_27:
+    nombre: Tabasco
+    slot: tabasco
+  Estado_28:
+    nombre: Tamaulipas
+    slot: tamaulipas
+  Estado_29:
+    nombre: Tlaxcala
+    slot: tlaxcala
+  Estado_30:
+    nombre: Veracruz
+    slot: veracruz
+  Estado_31:
+    nombre: Yucatán
+    slot: yucatan
+  Estado_32:
+    nombre: Zacatecas
+    slot: zacatecas
+  

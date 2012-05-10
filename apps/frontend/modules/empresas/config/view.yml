@@ -1,0 +1,4 @@
+listadoSuccess:
+  metas:
+    title:       <?php echo sfConfig::get('app_page_title')?> - Empresas
+    description: Listado de empresas en Mexico

@@ -1,0 +1,32 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Estado
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          estado
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: 
+        _edit:         { label: Editar }
+        _new:          { label: Nuevo }
+        _delete:       { label: Borrar }
+        _list:         { label: Regresar }
+        _save:         { label: Guardar }
+        _save_and_add: { label: Guardar y Agregar otro}
+        
+      fields:  ~
+      list:    
+        title:         Estados
+      filter:  
+        class:             false
+      form:    ~
+      edit:   
+        title:        Editar Estado
+      new:     
+        title:        Nuevo Estado

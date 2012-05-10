@@ -1,0 +1,3 @@
+all:
+  components:
+    banners_segmentos: [ anuncio, segmentos ]

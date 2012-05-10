@@ -1,0 +1,35 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Ubicacion
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          ubicacion
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: 
+        _save:             { label: Guardar }
+        _save_and_add:     { label: Guardar y agregar otro }
+        _delete:           { label: Borrar }
+        _new:              { label: Nuevo }
+        _edit:             { label: Editar }
+        _list:             { label: Regresar }
+
+      fields:  ~
+      list:    
+        title:            Administración de las Ubicaciones
+        actions:          {}
+        peer_method:      doSelectJoinAll
+        display:          [ empresa, calle, numero, colonia, codigo_postal, delegacion, estado, metro]
+      filter:  
+        display:          [ calle, numero, colonia, codigo_postal, delegacion, estado_id, metro]
+      form:    ~
+      edit:    
+        title:           Editar Ubicación
+      new:     
+        title:           Nueva Ubicación

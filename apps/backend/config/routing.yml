@@ -1,0 +1,101 @@
+segmento:
+  class: sfPropelRouteCollection
+  options:
+    model:                Segmento
+    module:               segmento
+    prefix_path:          segmento
+    column:               id
+    with_wildcard_routes: true
+
+general:
+  class: sfPropelRouteCollection
+  options:
+    model:                General
+    module:               admingeneral
+    prefix_path:          admingeneral
+    column:               empresa_id
+    with_wildcard_routes: true
+
+micrositio:
+  class: sfPropelRouteCollection
+  options:
+    model:                Micrositio
+    module:               adminmicrositio
+    prefix_path:          adminmicrositio
+    column:               empresa_id
+    with_wildcard_routes: true
+
+ubicacion:
+  class: sfPropelRouteCollection
+  options:
+    model:                Ubicacion
+    module:               adminubicacion
+    prefix_path:          adminubicacion
+    column:               empresa_id
+    with_wildcard_routes: true
+
+banner:
+  class: sfPropelRouteCollection
+  options:
+    model:                Banner
+    module:               adminanuncio
+    prefix_path:          adminanuncio
+    column:               id
+    with_wildcard_routes: true
+
+noticia:
+  class: sfPropelRouteCollection
+  options:
+    model:                Noticia
+    module:               adminnoticia
+    prefix_path:          adminnoticia
+    column:               id
+    with_wildcard_routes: true
+
+producto:
+  class: sfPropelRouteCollection
+  options:
+    model:                Producto
+    module:               adminproducto
+    prefix_path:          adminproducto
+    column:               id
+    with_wildcard_routes: true
+
+empresa:
+  class: sfPropelRouteCollection
+  options:
+    model:                Empresa
+    module:               admin-empresa
+    prefix_path:          admin-empresa
+    column:               id
+    with_wildcard_routes: true
+
+categoria:
+  class: sfPropelRouteCollection
+  options:
+    model:               Categoria
+    module:              categoria
+    prefix_path:         categoria
+    column:              id
+    with_wildcard_routes: true
+
+estado:
+  class: sfPropelRouteCollection
+  options:
+    model:               Estado
+    module:              estado
+    prefix_path:         estado
+    column:              id
+    with_wildcard_routes: true
+
+# default rules
+homepage:
+  url:   /
+  param: { module: home, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

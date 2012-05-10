@@ -1,0 +1,4 @@
+listadoSuccess:
+  metas:
+    title:    <?php echo sfConfig::get('app_page_title')?> - Segmentos 
+    description: listado de segmentos donde se indexan las empresas

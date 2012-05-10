@@ -1,0 +1,27 @@
+cache:
+  propel:
+    class: sfPropelDatabase
+    param:
+      classname: DebugPDO
+
+dev:
+  propel:
+    param:
+      classname:  DebugPDO
+
+test:
+  propel:
+    param:
+      classname:  DebugPDO
+
+all:
+  propel:
+    class:        sfPropelDatabase
+    param:
+      classname:  PropelPDO
+      dsn:        mysql:dbname=festejalo;host=localhost
+      username:   root
+      password:   2002080879
+      encoding:   utf8
+      persistent: true
+      pooling:    true

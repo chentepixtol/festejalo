@@ -1,0 +1,76 @@
+Categoria:
+  Categoria_1:
+    nombre: Auditivos
+    slot: auditivos
+  Categoria_2:
+    nombre: Autos
+    slot: autos
+  Categoria_3:
+    nombre: Bebes
+    slot: bebes
+  Categoria_4:
+    nombre: Computo
+    slot: computo
+  Categoria_5:
+    nombre: Construcción
+    slot: construccion
+  Categoria_6:
+    nombre: Deporte
+    slot: deporte
+  Categoria_7:
+    nombre: Electronica
+    slot: electronica
+  Categoria_8:
+    nombre: Herramientas
+    slot: herramientas
+  Categoria_9:
+    nombre: Juguetes
+    slot: juguetes
+  Categoria_10:
+    nombre: 'Linea Blanca'
+    slot: linea-blanca
+  Categoria_11:
+    nombre: Maquinaria
+    slot: maquinaria
+  Categoria_12:
+    nombre: Motocicletas
+    slot: motocicletas
+  Categoria_13:
+    nombre: Muebles
+    slot: muebles
+  Categoria_14:
+    nombre: Musicales
+    slot: musicales
+  Categoria_15:
+    nombre: Opticos
+    slot: opticos
+  Categoria_16:
+    nombre: 'Refacciones Automotrices'
+    slot: refacciones-automotrices
+  Categoria_17:
+    nombre: 'Ropa y Calzado'
+    slot: ropa-y-calzado
+  Categoria_18:
+    nombre: 'Servicios Automotrices'
+    slot: servicios-automotrices
+  Categoria_19:
+    nombre: 'Servicios Educativos'
+    slot: servicios-educativos
+  Categoria_20:
+    nombre: 'Servicios Funerarios'
+    slot: servicios-funerarios
+  Categoria_21:
+    nombre: 'Servicios Medicos'
+    slot: servicios-medicos
+  Categoria_22:
+    nombre: 'Servicios Notariales'
+    slot: servicios-notariales
+  Categoria_23:
+    nombre: Seguros
+    slot: seguros
+  Categoria_24:
+    nombre: Turismo
+    slot: turismo
+  Categoria_25:
+    nombre: Veterinaria
+    slot: veterinaria

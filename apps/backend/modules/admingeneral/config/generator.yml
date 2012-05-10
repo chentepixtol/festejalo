@@ -1,0 +1,34 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           General
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          general
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: 
+        _save:             { label: Guardar }
+        _save_and_add:     { label: Guardar y agregar otro}
+        _new:              { label: Nuevo }
+        _delete:           { label: Borrar }
+        _edit:             { label: Editar }
+        _list:             { label: Regresar }
+      fields:  ~
+      list:    
+        title:             Administración de Información General
+        peer_method:       doSelectJoinAll
+        display:           [ empresa, sitio_web, email, telefono, fax ]
+        actions:           {}
+      filter:  
+        display:           [ sitio_web, email, telefono ]
+      form:    ~
+      edit:    
+        title:             Editar Información General
+      new:    
+        title:             Información General

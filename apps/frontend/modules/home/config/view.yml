@@ -1,0 +1,4 @@
+indexSuccess:
+  metas:
+    title:    <?php echo sfConfig::get('app_page_title')?> 
+    description: Directorio de empresas en mexico

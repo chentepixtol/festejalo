@@ -1,0 +1,27 @@
+all:
+  metas:
+    title:        <?php echo sfConfig::get('app_page_title')?>  - Buscador
+
+anuncioSuccess:
+  metas:
+    description:  Buscar en los anuncios publicitarios de las empresas
+
+indexSuccess:
+  metas:
+    description:  Buscar en el listado de empresas
+
+micrositioSuccess:
+  metas:
+    description:  Buscar en los Micrositios de las empresas
+
+noticiaSuccess:
+  metas:
+    description:  Buscar en las noticias de las empresas
+
+productoSuccess:
+  metas:
+    description:  Buscar en los productos de las empresas
+
+ubicacionSuccess:
+  metas:
+    description:  Buscar por la direccion de la empresa

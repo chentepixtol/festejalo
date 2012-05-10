@@ -1,0 +1,47 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           sfGuardUser
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_user
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      fields:
+        password_again: { label: "Password (nuevamente)" }
+
+      list:
+        title:   Usuarios
+        display: [=username, created_at, last_login]
+        object_actions:
+          _edit:         { label: Editar }
+          _delete:       { label: Borrar }
+        batch_actions:
+          _delete:       { label: Borrar }
+        actions:
+          _new:          { label: Nuevo }
+        
+      filter:
+        class:  false
+
+      form:
+        class: sfGuardUserAdminForm
+        display:
+          "NONE":                   [username, password, password_again]
+          "Permisos": [is_active, sf_guard_user_permission_list]
+        actions:
+          _delete:       { label: Borrar }
+          _list:         { label: Regresar }
+          _save:         { label: Guardar }
+          _save_and_add: { label: Guardar y Agregar otro}
+        
+      edit:
+        title: Usuario: "%%username%%"
+
+      new:
+        title: Nuevo Usuario

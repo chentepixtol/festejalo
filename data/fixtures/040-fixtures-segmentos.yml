@@ -1,0 +1,16 @@
+Segmento:
+  Segmento_1:
+    nombre: 'Segmento 1'
+    slot: segmento-1
+  Segmento_2:
+    nombre: 'Segmento 2'
+    slot: segmento-2
+  Segmento_3:
+    nombre: 'Segmento 3'
+    slot: segmento-3
+  Segmento_4:
+    nombre: 'Segmento 4'
+    slot: segmento-4
+  Segmento_5:
+    nombre: 'Segmento 5'
+    slot: segmento-5

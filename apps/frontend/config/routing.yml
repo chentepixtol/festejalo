@@ -1,0 +1,81 @@
+list_noticia:
+  url:       /empresa/:slot/noticias/*
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: noticia, action: empresa }
+
+list_producto:
+  url:       /empresa/:slot/productos/*
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: producto, action: empresa }
+
+maps:
+  url:       /empresa/:slot/mapa/*
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: maps, action: show }
+
+list_banner:
+  url:       /empresa/:slot/anuncios/*
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: anuncio, action: empresa }
+
+tramite:
+  url:       /empresa/:slot/tramites
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: empresa, action: tramite }
+
+show_empresa:
+  url:       /empresa/:slot/*
+  class:     sfPropelRoute
+  options:   { model: Empresa, type: object }
+  param:     { module: empresa, action: show }
+
+show_producto:
+  url:       /producto/:slot
+  class:     sfPropelRoute
+  options:   { model: Producto, type: object }
+  param:     { module: producto, action: show }
+
+show_noticia:
+  url:       /noticia/:fecha_publicacion/:slot
+  class:     sfPropelRoute
+  options:   { model: Noticia, type: object }
+  param:     { module: noticia, action: show }
+
+show_banner:
+  url:       /anuncio/:slot
+  class:     sfPropelRoute
+  options:   { model: Banner, type: object }
+  param:     { module: anuncio, action: show }
+
+ver_empresas_por_categoria:
+  url:       /categoria/:slot
+  class:     sfPropelRoute
+  options:   { model: Categoria, type: object }
+  param:     { module: categoria, action: empresas }
+
+ver_empresas_por_segmento:
+  url:       /segmento/:slot
+  class:     sfPropelRoute
+  options:   { model: Segmento, type: object }
+  param:     { module: segmento, action: empresas }
+
+maps_pag:
+  url:       /mapas/page/:page
+  param:     { module: maps, action: index }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: home, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

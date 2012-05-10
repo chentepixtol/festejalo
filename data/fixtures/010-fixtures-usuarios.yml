@@ -1,0 +1,84 @@
+sfGuardUser:
+  sfGuardUser_2:
+    username: administrator
+    password: 2002080879
+    created_at: '2009-02-20 22:13:45'
+    last_login: '2009-02-21 14:29:49'
+    is_active: '1'
+    is_super_admin: '0'
+  sfGuardUser_3:
+    username: basico
+    password: basico
+    created_at: '2009-02-21 13:40:41'
+    last_login: '2009-02-21 14:28:36'
+    is_active: '1'
+    is_super_admin: '0'
+  sfGuardUser_4:
+    username: intermedio
+    password: intermedio
+    created_at: '2009-02-21 13:41:02'
+    last_login: '2009-02-21 14:17:08'
+    is_active: '1'
+    is_super_admin: '0'
+  sfGuardUser_5:
+    username: avanzado
+    password: avanzado
+    created_at: '2009-02-21 13:41:28'
+    last_login: '2009-02-21 14:29:17'
+    is_active: '1'
+    is_super_admin: '0'
+
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: Basico
+    description: 'Un Distribuidor que se registra sin costo'
+  sfGuardPermission_2:
+    name: Intermedio
+    description: 'Nivel Intermedio del Distribuidor'
+  sfGuardPermission_3:
+    name: Avanzado
+    description: 'Distribuidor con todas las funcionalidades'
+  sfGuardPermission_4:
+    name: Administrador
+    description: SuperUsuario
+
+sfGuardUserPermission:
+  sfGuardUserPermission_3_1:
+    user_id: sfGuardUser_3
+    permission_id: sfGuardPermission_1
+  sfGuardUserPermission_4_2:
+    user_id: sfGuardUser_4
+    permission_id: sfGuardPermission_2
+  sfGuardUserPermission_5_3:
+    user_id: sfGuardUser_5
+    permission_id: sfGuardPermission_3
+  sfGuardUserPermission_2_4:
+    user_id: sfGuardUser_2
+    permission_id: sfGuardPermission_4
+
+Perfil:
+  Perfil_2:
+    user_id: sfGuardUser_2
+    nombre: 'Admin'
+    apellido_paterno: ''
+    apellido_materno: ''
+    email: 'chente_pixtol@hotmail.com'
+  Perfil_3:
+    user_id: sfGuardUser_3
+    nombre: 'basico'
+    apellido_paterno: ''
+    apellido_materno: ''
+    email: 'basic@hotmail.com'
+  Perfil_4:
+    user_id: sfGuardUser_4
+    nombre: 'Intermedio'
+    apellido_paterno: ''
+    apellido_materno: ''
+    email: 'inter@hotmail.com'
+  Perfil_5:
+    user_id: sfGuardUser_5
+    nombre: 'Avanzado'
+    apellido_paterno: ''
+    apellido_materno: ''
+    email: 'advance@hotmail.com'
+    

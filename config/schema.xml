@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database SYSTEM "database.dtd">
+<database name="propel" package="lib.model" defaultIdMethod="native" noXsd="true">
+
+  <table name="sf_guard_user_profile" idMethod="native" phpName="Perfil">
+    <column name="id" type="INTEGER" required="true" primaryKey="true" autoIncrement="true" />
+	<column name="user_id" type="INTEGER" required="true" />
+	<column name="nombre" type="VARCHAR" size="30" required="true" />
+    <column name="apellido_paterno" type="VARCHAR" size="30" />
+    <column name="apellido_materno" type="VARCHAR" size="30" />
+	<column name="email" type="VARCHAR" size="100" required="true" />
+    <column name="telefono" type="INTEGER" />
+	  <foreign-key foreignTable="sf_guard_user" onDelete="cascade">
+		  <reference local="user_id" foreign="id"/>
+	  </foreign-key>
+	  <unique>
+		  <unique-column name="email" />
+	  </unique>
+  </table>
+
+  <table name="empresa" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" required="true" type="INTEGER" />
+	  <column name="user_id" type="INTEGER" required="true" />
+	  <column name="nombre" type="VARCHAR" size="150" required="true" />
+	  <column name="descripcion" type="VARCHAR" size="255" />
+	  <column name="afiliacion_fonacot" type="VARCHAR" size="40" />
+	  <column name="slot" type="VARCHAR" size="150" />
+	  <foreign-key foreignTable="sf_guard_user_profile" onDelete="cascade">
+		  <reference local="user_id" foreign="user_id"/>
+	  </foreign-key>
+  </table>
+
+  <table name="estado" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="nombre" type="VARCHAR" size="150" required="true" />
+	  <column name="slot" type="VARCHAR" size="150" />
+  </table>	
+
+  <table name="general" idMethod="native">
+	  <column name="empresa_id" required="true" type="INTEGER" primaryKey="true" />
+	  <column name="telefono" type="INTEGER" />
+	  <column name="fax" type="INTEGER" />
+	  <column name="sitio_web" type="VARCHAR" size="150" />
+	  <column name="email" type="VARCHAR" size="150" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key>  
+  </table>
+
+  <table name="ubicacion" idMethod="native">
+	  <column name="empresa_id" type="INTEGER" required="true" primaryKey="true" />
+	  <column name="calle" type="VARCHAR" size="200" />
+	  <column name="numero" type="INTEGER" />
+	  <column name="colonia" type="VARCHAR" size="200" required="true" />
+	  <column name="codigo_postal" type="INTEGER" required="true" />
+	  <column name="delegacion" type="VARCHAR" size="150" required="true" />
+	  <column name="estado_id" type="INTEGER" />
+	  <column name="latitud" type="DOUBLE" />
+	  <column name="longitud" type="DOUBLE" />  
+	  <column name="metro" type="VARCHAR" size="100" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key>
+	  <foreign-key foreignTable="estado" onDelete="cascade">
+		  <reference local="estado_id" foreign="id"/>
+	  </foreign-key> 
+  </table>		
+	
+  <table name="categoria" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="nombre" type="VARCHAR" size="150" required="true" />
+	  <column name="slot" type="VARCHAR" size="150" />
+  </table>
+  
+  <table name="segmento" idMethod="native">
+  	<column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	<column name="nombre" type="VARCHAR" size="150" required="true" />
+	<column name="slot" type="VARCHAR" size="150" />
+  </table>
+	
+  <table name="producto" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="empresa_id" type="INTEGER" required="true" />
+	  <column name="categoria_id" type="INTEGER" required="true" />
+	  <column name="nombre" type="VARCHAR" size="150" required="true" />
+	  <column name="descripcion" type="LONGVARCHAR" />
+	  <column name="foto" type="VARCHAR" size="255" />
+	  <column name="miniatura" type="VARCHAR" size="255" />
+	  <column name="slot" type="VARCHAR" size="150" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key>
+	  <foreign-key foreignTable="categoria" onDelete="cascade">
+		  <reference local="categoria_id" foreign="id"/>		  
+	  </foreign-key> 
+  </table>
+	
+  <table name="tramite" idMethod="native">
+	  <column name="empresa_id" type="INTEGER" required="true" primaryKey="true" />
+	  <column name="recepcion_del_credito" type="VARCHAR" size="255" />
+	  <column name="recepcion_del_tramite" type="VARCHAR" size="255" />
+	  <column name="persona_encargada" type="VARCHAR" size="100" />
+	  <column name="horario" type="VARCHAR" size="80" />
+	  <column name="procedimiento" type="LONGVARCHAR" />
+	  <column name="documentacion" type="VARCHAR" size="255" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+  </table>
+	
+  <table name="micrositio" idMethod="native">
+	  <column name="empresa_id" type="INTEGER" required="true" primaryKey="true" />
+	  <column name="quienes_somos" type="VARCHAR" size="255" />
+	  <column name="mision" type="LONGVARCHAR" />
+	  <column name="vision" type="LONGVARCHAR" />
+	  <column name="logo" type="VARCHAR" size="255" />
+	  <column name="mini_logo" type="VARCHAR" size="255" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+  </table>
+	
+  <table name="empresa_categoria" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="empresa_id" type="INTEGER" required="true" />
+	  <column name="categoria_id" type="INTEGER" required="true" />	  
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+	  <foreign-key foreignTable="categoria" onDelete="cascade">
+		  <reference local="categoria_id" foreign="id"/>		  
+	  </foreign-key> 
+	  <unique>
+		  <unique-column name="empresa_id" />
+		  <unique-column name="categoria_id" />
+	  </unique>
+  </table>
+	
+  <table name="empresa_segmento" idMethod="native">
+  	<column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	<column name="empresa_id" type="INTEGER" required="true" />
+	<column name="segmento_id" type="INTEGER" required="true" />
+	<foreign-key foreignTable="empresa" onDelete="cascade">
+		<reference local="empresa_id" foreign="id" />
+	</foreign-key>
+	<foreign-key foreignTable="segmento" onDelete="cascade">
+		<reference local="segmento_id" foreign="id" />
+	</foreign-key>
+	<unique>
+		<unique-column name="empresa_id" />
+		<unique-column name="segmento_id" />
+	</unique>
+  </table>
+	
+  <table name="banner" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="empresa_id" type="INTEGER" required="true" />
+	  <column name="titulo" type="VARCHAR" size="150" required="true" />
+	  <column name="texto" type="LONGVARCHAR" />
+	  <column name="slot" type="VARCHAR" size="150" />
+	  <column name="imagen" type="VARCHAR" size="255" />
+	  <column name="tipo" type="INTEGER" size="2" default="1" />
+	  <column name="segmento_id" type="INTEGER" />
+	  <column name="categoria_id" type="INTEGER" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+	  <foreign-key foreignTable="segmento" onDelete="cascade">
+	  	  <reference local="segmento_id" foreign="id" />
+	  </foreign-key>
+	  <foreign-key foreignTable="categoria" onDelete="cascade">
+	  	  <reference local="categoria_id" foreign="id" />
+	  </foreign-key>
+  </table>
+	
+  <table name="cupon" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="empresa_id" type="INTEGER" required="true" />
+	  <column name="titulo" type="VARCHAR" size="150" />
+	  <column name="descripcion" type="VARCHAR" size="255" />
+	  <column name="numero" type="INTEGER" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+  </table>
+	
+  <table name="noticia" idMethod="native">
+	  <column name="id" autoIncrement="true" primaryKey="true" type="INTEGER" required="true" />
+	  <column name="empresa_id" type="INTEGER" required="true" />
+	  <column name="titulo" type="VARCHAR" size="150" required="true" />
+	  <column name="texto" type="LONGVARCHAR" />
+	  <column name="fecha_publicacion" type="DATE" />
+	  <column name="fecha_cancelacion" type="DATE" />
+	  <column name="slot" type="VARCHAR" size="150" />
+	  <foreign-key foreignTable="empresa" onDelete="cascade">
+		  <reference local="empresa_id" foreign="id"/>
+	  </foreign-key> 
+  </table>
+	
+  <table name="visitante" idMethod="native">
+	  <column name="id" primaryKey="true" autoIncrement="true" type="INTEGER" required="true" />
+	  <column name="username" type="VARCHAR" size="30" required="true" />
+	  <column name="password" type="VARCHAR" size="36" required="true" />
+	  <column name="email" type="VARCHAR" size="150" required="true" />
+	  <column name="nombre" type="VARCHAR" size="50" />
+	  <column name="apellidos" type="VARCHAR" size="100" />
+	  <column name="tarjeta_fonacot" type="VARCHAR" size="100" />
+	  <column name="promocion_list" type="BOOLEAN" />
+	  <unique>
+		  <unique-column name="username" />
+	  </unique>
+	  <unique>
+		  <unique-column name="email" />
+	  </unique>
+  </table>
+	
+  <table name="visitante_cupon" idMethod="native">
+	  <column name="id" primaryKey="true" autoIncrement="true" type="INTEGER" required="true" />
+	  <column name="visitante_id" type="INTEGER" required="true" />
+	  <column name="cupon_id" type="INTEGER" required="true" />
+	  <column name="codigo" type="VARCHAR" size="40" />
+	  <foreign-key foreignTable="visitante" onDelete="cascade">
+		  <reference local="visitante_id" foreign="id"/>
+	  </foreign-key>
+	  <foreign-key foreignTable="cupon">
+		  <reference local="cupon_id" foreign="id"/>
+	  </foreign-key>
+	  <unique>
+		  <unique-column name="visitante_id" />
+		  <unique-column name="cupon_id" />
+	  </unique>
+  </table>
+	
+  <table name="autocompleter" idMethod="native">
+	  <column name="id" primaryKey="true" autoIncrement="true" type="INTEGER" required="true" />
+	  <column name="suggest" type="VARCHAR" size="100" required="true" />
+  </table>
+	
+  <table name="empresas_sin_ubicacion" skipSql="true" readOnly="true">
+ 	  <column name="id" autoIncrement="true" primaryKey="true" required="true" type="INTEGER" />
+	  <column name="user_id" type="INTEGER" required="true" />
+	  <column name="nombre" type="VARCHAR" size="150" required="true" />
+	  <column name="descripcion" type="VARCHAR" size="255" />
+	  <column name="afiliacion_fonacot" type="VARCHAR" size="40" />
+	  <column name="slot" type="VARCHAR" size="150" />
+	  <foreign-key foreignTable="sf_guard_user_profile" onDelete="cascade">
+		  <reference local="user_id" foreign="user_id"/>
+	  </foreign-key>
+  </table>
+	
+</database>

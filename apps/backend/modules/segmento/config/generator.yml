@@ -1,0 +1,39 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Segmento
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          segmento
+    with_propel_route:     1
+    css:                   generator.css
+
+    config:
+      actions: ~
+      fields:  ~
+      list:   
+        title:             Segmentos
+        object_actions:
+          _edit:           { label: Editar }
+          _delete:         { label: Borrar }
+        batch_actions:
+          _delete:         { label: Borrar }
+        actions:
+          _new:            { label: Nuevo }
+        
+      filter:  
+        class:             false
+      form:    
+        actions:
+          _delete:         { label: Borrar }
+          _save:           { label: Guardar }
+          _save_and_add:   { label: Guardar y Agregar }
+          _list:           { label: Regresar }
+          
+      edit:    
+        title:             Editar Segmento
+      new:  
+        title:             Nuevo Segmento

@@ -1,0 +1,8 @@
+_anunciosAleatorios:
+  enabled:            on
+  
+_categorias:
+  enabled:            on
+  
+_segmentos:
+  enabled:            on
